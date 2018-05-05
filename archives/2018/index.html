@@ -76,7 +76,39 @@
                         <nav id="sub-nav">
                             <div id="search-form-wrap">
 
-    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://eosofksa.github.io"></form>
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
 
 </div>
                         </nav>
@@ -130,9 +162,7 @@
     
 
         <p class="article-excerpt">
-            2018.05.04 ~ 2018.05.05적용개발일지라고 하면 왠지 많은 사람들이 보고 따라할 수 있게 쓰는 것이 정석이겠지만, 나는 보고 따라한 사람이 나였기에 그냥 내가 뭘 보고 했는지를 기록하는 것이 좋을 것 같다.
-
-https://kdydesign.github.io/2017/06/23/start-hexo-blog/처음 Hexo를 발견한 블로그인데, 
+            GitHub + Hexo 개발일지 下 - 개발개발개발완성!
         </p>
     </div>
 </article>
@@ -159,12 +189,7 @@ https://kdydesign.github.io/2017/06/23/start-hexo-blog/처음 Hexo를 발견한 
     
 
         <p class="article-excerpt">
-            시작시작은 대입에 치여 시간을 내지 못하는 3학년들의 부스 활동을 위한 웹 매거진 제작이었다.전시부인 우리 클럽의 특성상 SAF 때는 하는 것이 없기에 이번에는 SAF까지 해보자는 목표로각자 컴퓨터와 관련된 관심분야에 관한 글을 써서 업로드하는 방향으로 진행하고자 하였다.
-이 글들을 모아둘 웹 매거진을 제작할 플랫폼으로는
-
-페이스북 페이지
-워드프레스
-티스토
+            GitHub + Hexo 개발일지 上 - 시작
         </p>
     </div>
 </article>

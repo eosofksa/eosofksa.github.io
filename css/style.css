@@ -1037,7 +1037,7 @@ img {
   font-size: 16px;
   line-height: 1.6em;
   overflow: hidden;
-  height: 6.4em;
+  height: 1.6em;
 }
 .article-summary:hover .thumbnail .thumbnail-image {
   opacity: 0.7;
