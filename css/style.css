@@ -242,6 +242,10 @@ code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   background-color: #444;
 }
+img {
+  width: 40%;
+  border: 1px solid #444;
+}
 .container {
   position: relative;
   padding: 0 20px;
@@ -1173,6 +1177,7 @@ a.article-title:hover {
   height: auto;
   display: block;
   margin: auto;
+  border: 5px solid #ccc;
 }
 .article-entry iframe {
   border: none;
