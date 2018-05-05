@@ -240,7 +240,7 @@ code {
   font-size: 0.8em;
   border-radius: 2px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
-  background-color: #f8f8f8;
+  background-color: #444;
 }
 .container {
   position: relative;
@@ -1136,6 +1136,7 @@ a.article-title:hover {
 .article-entry h5,
 .article-entry h6 {
   font-weight: 600;
+  color: #ddd;
 }
 .article-entry h1,
 .article-entry h2,
