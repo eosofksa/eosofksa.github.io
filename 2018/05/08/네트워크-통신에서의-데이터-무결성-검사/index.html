@@ -18,7 +18,7 @@
 <meta property="og:description" content="네트워크 통신에서의 데이터 무결성 검사 INTRO흔히 컴퓨터는 0과 1로 이루어져 있다는 이야기를 모두 한번쯤 들어보았을 것이다.실제로 모든 디지털 정보는 0과 1의 조합을 통해 표현된다. 우리가 어떤 문자를 통해 정보를 기록하는 것과 같은 이치로 볼 수 있는데, 그 이해를 위해 간단히 두 가지 예를 들어보겠다.먼저, 사람이 사용하는 문장을 0과 1로 바">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-08T08:59:58.862Z">
+<meta property="og:updated_time" content="2018-05-08T10:01:36.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="네트워크 통신에서의 데이터 무결성 검사 | EOS">
 <meta name="twitter:description" content="네트워크 통신에서의 데이터 무결성 검사 INTRO흔히 컴퓨터는 0과 1로 이루어져 있다는 이야기를 모두 한번쯤 들어보았을 것이다.실제로 모든 디지털 정보는 0과 1의 조합을 통해 표현된다. 우리가 어떤 문자를 통해 정보를 기록하는 것과 같은 이치로 볼 수 있는데, 그 이해를 위해 간단히 두 가지 예를 들어보겠다.먼저, 사람이 사용하는 문장을 0과 1로 바">
@@ -193,12 +193,11 @@ ga('send', 'pageview');
 <li>전송 과정에서 발생하는 물리적인 장애로 인한 변조</li>
 <li>의도적인 데이터 조작</li>
 </ol>
-<p>여기까지 알아보았다면 checksum은 1.의 대안으로 등장했다는 것을 알 수 있을 것이다.<br>2.의 경우 프로토콜의 암호화를 통해 극복한다. 이 이야기를 갑자기 한 이유는 단순하게 정의된 $f$에 대해 만들어진 $f(m)$과 $f(m’)$값의 비교 만으로 어떻게 무결성이 보장되는지 설명하기 위함이다.<br>$m’$은 어떤 이유로 인해 $m$(송신 raw-data)의 bit들이 변조된 bit-string이고, $c’$도 마찬가지로 변조의 가능성이 존재한다. 이 때 checksum이 1-bit라면 $m=m’$이 아닌데도 $f(m’)=c’$ 이 될 확률이 굉장히 높을 수 있다. 하지만, checksum의 bit를 하나 늘려 2-bit checksum으로 만들어버리면, 그 확률이 크게 감소한다. 다시 말해, checksum bit가 2배로 늘어날 때마다 $m \ne m’$일때 $f(m’)=c’$일 확률은 logarithmic하게 감소한다. Checksum 생성 함수 $f$의 특징을 고려하여 경우를 따져보면 쉽게 그 이유를 확인할 수 있는데, 글로만 보아선 크게 와닿지 않으므로 직접 간단한 테스트를 해보았다 ^^;</p>
-<p>Trials : 10000</p>
+<p>여기까지 알아보았다면 checksum은 1.의 대안으로 등장했다는 것을 알 수 있을 것이다.<br>2.의 경우 프로토콜의 암호화를 통해 극복한다. 이 이야기를 갑자기 한 이유는 단순하게 정의된 $f$에 대해 만들어진 $f(m)$과 $f(m’)$값의 비교 만으로 어떻게 무결성이 보장되는지 설명하기 위함이다.<br>$m’$은 어떤 이유로 인해 $m$(송신 raw-data)의 bit들이 변조된 bit-string이고, $c’$도 마찬가지로 변조의 가능성이 존재한다. 이 때 checksum이 1-bit라면 $m=m’$이 아닌데도 $f(m’)=c’$ 이 될 확률이 굉장히 높을 수 있다. 하지만, checksum의 bit를 하나 늘려 2-bit checksum으로 만들어버리면, 그 확률이 크게 감소한다. 다시 말해, checksum bit가 2배로 늘어날 때마다 $m \ne m’$일때 $f(m’)=c’$일 확률은 logarithmic하게 감소한다. Checksum 생성 함수 $f$의 특징을 고려하여 경우를 따져보면 쉽게 그 이유를 확인할 수 있는데, 글로만 보아선 크게 와닿지 않으므로 직접 간단한 테스트를 해보았다 ^^; (10000회)</p>
 <table>
 <thead>
 <tr>
-<th>Checksum</th>
+<th>Bits</th>
 <th>2bit</th>
 <th>4bit</th>
 <th>8bit</th>
@@ -207,12 +206,11 @@ ga('send', 'pageview');
 </thead>
 <tbody>
 <tr>
-<td>Probability</td>
+<td>확률</td>
 <td>0.252</td>
 <td>0.0645</td>
 <td>0.004</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -220,7 +218,6 @@ ga('send', 'pageview');
 <td>0.0631</td>
 <td>0.0033</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -228,7 +225,6 @@ ga('send', 'pageview');
 <td>0.06</td>
 <td>0.004</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -236,7 +232,6 @@ ga('send', 'pageview');
 <td>0.0623</td>
 <td>0.0038</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -244,7 +239,6 @@ ga('send', 'pageview');
 <td>0.0677</td>
 <td>0.0036</td>
 <td>0.0001</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -252,7 +246,6 @@ ga('send', 'pageview');
 <td>0.0624</td>
 <td>0.0042</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -260,7 +253,6 @@ ga('send', 'pageview');
 <td>0.0634</td>
 <td>0.0041</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -268,7 +260,6 @@ ga('send', 'pageview');
 <td>0.0641</td>
 <td>0.0031</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -276,7 +267,6 @@ ga('send', 'pageview');
 <td>0.0625</td>
 <td>0.0035</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
 <td></td>
@@ -284,29 +274,26 @@ ga('send', 'pageview');
 <td>0.0655</td>
 <td>0.0034</td>
 <td>0.0</td>
-<td></td>
 </tr>
 <tr>
-<td>Average</td>
+<td>평균</td>
 <td>0.2499</td>
 <td>0.0636</td>
 <td>0.0037</td>
-<td>0</td>
-<td></td>
+<td>0.0</td>
 </tr>
 <tr>
-<td>Remark</td>
+<td>&asymp;</td>
 <td></td>
-<td>$\simeq$ 0.2499$^{\text{2}}$</td>
-<td>$\simeq$ 0.0636$^{\text{2}}$</td>
-<td></td>
+<td>0.2499&sup2;</td>
+<td>0.0636&sup2;</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <p>2017학년도 1학기에 해보았던 것이라 설정했던 $m$의 length와 각 bit의 변조 확률은 기억나지 않는다. (아쉽게도 소스 코드를 폐기한듯..) 하지만 위 실험 결과로 미루어 보아 위에서 강조한 내용이 맞는 것을 확인할 수 있다 ㅋㅋ…<br>즉, 어떤 메시지를 수신한 후, 그에 해당하는 $m’$과 $c’$에 대해 $f(m’)=c’$이 아닐경우 이를 reject하고 다시 같은 요청을 보내는데, 변조된 메시지임에도 이 과정을 통과할 가능성은 checksum의 길이에 따라 급격히 줄어든다.<br>실제로 인터넷 통신 시스템이나 마이크로프로세서 시스템 내부 명령에서의 오류 검증에 checksum이 사용되며, 그 정확성은 확률로서 보장한다. 이런 간단한 방식으로 완전한 데이터 통신을 보장하는  이 굉장히 대단하고 놀랍다… 관심있는 사람은 확률적으로 정확성을 높이는 비슷한 방식의 <a href="https://ko.wikipedia.org/wiki/RSA_암호" target="_blank" rel="noopener">RSA</a>도 살펴보면 좋을 것 같다.</p>
 <hr>
-<p><strong style="font-size:1.2em;">16-001 강래현</strong> <strong>(Rae-Hyun Kang | KANG)</strong><br>– Leader of EOS 16<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:krh000314@gmail.com" target="_blank" rel="noopener">krh000314@gmail.com</a></i>, <i class="icon fa fa-facebook" style="font-size: 1em;"> <a href="https://facebook.com/krh0314" target="_blank" rel="noopener">krh0314</a></i>, <i class="icon fa fa-github" style="font-size:1em;"> <a href="https://github.com/RHKang" target="_blank" rel="noopener">RHKang</a></i></p>
+<p><strong style="font-size:1.2em;">16-001 강래현</strong><br><strong>(Rae-Hyun Kang | KANG)</strong><br>– Leader of EOS 16<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:krh000314@gmail.com" target="_blank" rel="noopener">krh000314@gmail.com</a></i>, <i class="icon fa fa-facebook" style="font-size: 1em;"> <a href="https://facebook.com/krh0314" target="_blank" rel="noopener">krh0314</a></i>, <i class="icon fa fa-github" style="font-size:1em;"> <a href="https://github.com/RHKang" target="_blank" rel="noopener">RHKang</a></i></p>
 
         </div>
         <footer class="article-footer">
@@ -314,7 +301,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/" data-id="cjgxg3982000lb8umwwsiqilv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/" data-id="cjgxia6t90004egumotwuhqku" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
