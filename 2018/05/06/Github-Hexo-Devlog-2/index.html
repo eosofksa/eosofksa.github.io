@@ -40,6 +40,16 @@
 
     <link rel="stylesheet" href="/css/style.css">
 
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+    Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
+    function sendLink(encodedUrl) {
+      Kakao.Link.sendScrap({
+        requestUrl: encodedUrl
+      });
+      console.log("AAA")
+    }
+    </script>
     <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
     
     
@@ -61,6 +71,7 @@ ga('send', 'pageview');
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
+
 
 
 </head>
@@ -207,7 +218,8 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/" data-id="cjgyro1240004h0um4dqegeni" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/" data-id="cjgz2t12c0005fwumg1ntz5v2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -221,6 +233,7 @@ ga('send', 'pageview');
                 id = 'article-share-box-' + $this.attr('data-id'),
                 offset = $this.offset(),
                 box;
+
 
             if ($('#' + id).length) {
                 box = $('#' + id);
@@ -238,7 +251,7 @@ ga('send', 'pageview');
                             '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
                             '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
                             '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                            '<a href="' + encodedUrl + '" class="article-share-kakaotalk" target="_blank" title="KakaoTalk+"></a>',
+                            '<a href="javascript:sendLink(\''+encodedUrl+'\')" class="article-share-kakaotalk" target="_blank" title="KakaoTalk"></a>',
                         '</div>',
                     '</div>'
                 ].join('');
@@ -282,6 +295,7 @@ ga('send', 'pageview');
 
     
     </section>
+
 
 
                         </div>
