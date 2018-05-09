@@ -7,8 +7,16 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/</loc>
-        <lastmod>2018-05-09T15:27:03.836Z</lastmod>
+        <loc>http://eosofksa.github.io/2018/05/09/Automatic-Theorem-Proving-Intro/</loc>
+        <lastmod>2018-05-09T16:26:06.084Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/2018/05/10/Game-made-by-game/</loc>
+        <lastmod>2018-05-09T16:07:20.309Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +24,15 @@
 
     <url>
         <loc>http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/</loc>
-        <lastmod>2018-05-09T13:12:39.541Z</lastmod>
+        <lastmod>2018-05-09T16:07:06.701Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/2018/05/09/Game-quizzes/</loc>
+        <lastmod>2018-05-09T15:43:56.528Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +40,15 @@
 
     <url>
         <loc>http://eosofksa.github.io/2018/05/08/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%ED%86%B5%EC%8B%A0%EC%97%90%EC%84%9C%EC%9D%98-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%AC%B4%EA%B2%B0%EC%84%B1-%EA%B2%80%EC%82%AC/</loc>
-        <lastmod>2018-05-09T05:27:16.243Z</lastmod>
+        <lastmod>2018-05-09T15:33:29.818Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/</loc>
+        <lastmod>2018-05-09T15:27:03.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
