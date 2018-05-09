@@ -58,10 +58,21 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-118834969-1', 'auto');
 ga('send', 'pageview');
 
-</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</script>
     
     
 
+
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script>
+    Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
+    function sendLink(encodedUrl) {
+      Kakao.Link.sendScrap({
+        requestUrl: encodedUrl
+      });
+    }
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -211,7 +222,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/05/Github-Hexo-Devlog-1/" data-id="cjgz368ii0001csum7028r63i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/05/Github-Hexo-Devlog-1/" data-id="cjgz3egxs0001v4umdxuh1odl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -242,6 +253,7 @@ ga('send', 'pageview');
                             '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
                             '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
                             '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-kakaotalk" target="_blank" title="Kakaotalk"></a>',
                         '</div>',
                     '</div>'
                 ].join('');
