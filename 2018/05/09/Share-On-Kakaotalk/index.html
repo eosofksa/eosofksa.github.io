@@ -18,7 +18,7 @@
 <meta property="og:description" content="상황은 이해가 가지만 참 힘들게 한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-10T03:38:08.213Z">
+<meta property="og:updated_time" content="2018-05-10T03:40:07.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 블로그에 카카오톡으로 공유 추가하기 | EOS">
 <meta name="twitter:description" content="상황은 이해가 가지만 참 힘들게 한다.">
@@ -236,7 +236,7 @@ ga('send', 'pageview');
 <p>카톡 아이콘 노란색은 볼 수록 괜찮아서 일단 두기로 했다.</p>
 <h4 id="12-10-PM"><a href="#12-10-PM" class="headerlink" title="12:10 PM"></a>12:10 PM</h4><p>블로그 title을 바꾼 후에 카카오톡 공유를 했더니 title이 길어서 [EOS에서 확인]이 [EOS of KSA | 한국과학영재학교의 …]로 표기되기 시작했다….<br>그래서 커스텀 템플릿을 써보기로 하였다. title만을 위해서 하는 건 뭔가 비효율적인 것 같지만 그래도 언젠간 쓸모가 있겠지.</p>
 <p><img src="/images/Share-On-Kakaotalk-Kakaotalk_Custom_Template.png" alt="템플릿은 최대한 심플하게 했다"></p>
-<p>코드는 아래와 같이 템플릿 아이디를 명시해주고, title만 templateArgs로 따로 처리해주었다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Kakao.init(<span class="string">'5a4e0a58ac25b0dc3df9fb0c9fc72828'</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendLink</span>(<span class="params">encodedUrl</span>) </span>&#123;</span><br><span class="line">  Kakao.Link.sendScrap(&#123;</span><br><span class="line">    templateId: <span class="number">9469</span>,</span><br><span class="line">    requestUrl: encodedUrl,</span><br><span class="line">    templateArgs:&#123;</span><br><span class="line">      <span class="string">'title'</span>: <span class="string">'EOS'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>코드는 아래와 같이 템플릿 아이디를 명시해주고, title만 templateArgs로 따로 처리해주었다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Kakao.init(YourKeyHere);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendLink</span>(<span class="params">encodedUrl</span>) </span>&#123;</span><br><span class="line">  Kakao.Link.sendScrap(&#123;</span><br><span class="line">    templateId: <span class="number">9469</span>,</span><br><span class="line">    requestUrl: encodedUrl,</span><br><span class="line">    templateArgs:&#123;</span><br><span class="line">      <span class="string">'title'</span>: <span class="string">'EOS'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p><strong style="font-size:1.2em;">16-077 이원준</strong><br><strong>(Won-Joon Lee | sni/J)</strong><br>– 그림 그리는 개발자 / Designer of EOS 16<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:wjl0316@naver.com" target="_blank" rel="noopener">wjl0316@naver.com</a></i>, <i class="icon fa fa-instagram" style="font-size:1em;"> <a href="https://instagr.am/sniperj_got_ya_back" target="_blank" rel="noopener">sniperj_got_ya_back</a></i>, <i class="icon fa fa-facebook" style="font-size: 1em;"> <a href="https://facebook.com/wonjoonlee0316" target="_blank" rel="noopener">WonJoonLee0316</a></i>, <i class="icon fa fa-github" style="font-size: 1em;"> <a href="https://github.com/sni-j" target="_blank" rel="noopener">sni-J</a></i></p>
 
@@ -246,7 +246,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/" data-id="cjgzzgalb000b1kumdp58c9x1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/" data-id="cjgzzizr8000b5sum6xipua4f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
