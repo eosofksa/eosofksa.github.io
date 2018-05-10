@@ -28,13 +28,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/KSA-16/16-065-Yo-Han-Yoon/</loc>
-        <lastmod>2018-05-10T11:43:45.327Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/categories/KSA-16/16-045-Hong-Geun-Park/</loc>
         <lastmod>2018-05-10T11:48:48.107Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,15 +35,22 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/KSA-16/</loc>
+        <loc>http://eosofksa.github.io/categories/KSA-16/16-077-Won-Joon-Lee/</loc>
         <lastmod>2018-05-10T12:02:49.255Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/KSA-16/16-077-Won-Joon-Lee/</loc>
-        <lastmod>2018-05-10T12:02:49.255Z</lastmod>
+        <loc>http://eosofksa.github.io/categories/KSA-16/</loc>
+        <lastmod>2018-05-10T12:30:36.555Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/KSA-16/16-065-Yo-Han-Yoon/</loc>
+        <lastmod>2018-05-10T12:30:36.555Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
