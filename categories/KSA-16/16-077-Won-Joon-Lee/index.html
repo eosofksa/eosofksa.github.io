@@ -65,9 +65,13 @@ ga('send', 'pageview');
     <script type="text/javascript">
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
-      Kakao.Link.sendCustom({
-        templateId: 9474,
-        requestUrl: encodedUrl
+      Kakao.Link.sendScrap({
+        requestUrl: encodedUrl,
+        templateArgs:{
+          'name':'EOS',
+          'url':encodedUrl
+        },
+        installTalk: true
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->

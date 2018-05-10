@@ -69,9 +69,13 @@ ga('send', 'pageview');
     <script type="text/javascript">
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
-      Kakao.Link.sendCustom({
-        templateId: 9474,
-        requestUrl: encodedUrl
+      Kakao.Link.sendScrap({
+        requestUrl: encodedUrl,
+        templateArgs:{
+          'name':'EOS',
+          'url':encodedUrl
+        },
+        installTalk: true
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -224,7 +228,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/05/Github-Hexo-Devlog-1/" data-id="cjh06z7xu00057wum6hfpuczs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/05/Github-Hexo-Devlog-1/" data-id="cjh074b9k000bosumf29ppwgh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
