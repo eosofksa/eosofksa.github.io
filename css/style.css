@@ -1033,7 +1033,7 @@ code {
   font-size: 16px;
   line-height: 1.6em;
   overflow: hidden;
-  height: 1.6em;
+  height: 3.2em;
 }
 .article-summary:hover .thumbnail .thumbnail-image {
   opacity: 0.7;
