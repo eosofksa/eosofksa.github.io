@@ -66,10 +66,8 @@ ga('send', 'pageview');
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
       Kakao.Link.sendScrap({
-        requestUrl: encodedUrl,
-        templateArgs:{
-          'SCRAP_TITLE': 'EOS'
-        }
+        templateId: 9474,
+        requestUrl: encodedUrl
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
