@@ -18,7 +18,7 @@
 <meta property="og:description" content="KSATP 연구회 부스도 많이 오세요">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-09T16:26:06.084Z">
+<meta property="og:updated_time" content="2018-05-10T00:06:37.419Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="자동 정리 증명의 간단한 아이디어 | EOS">
 <meta name="twitter:description" content="KSATP 연구회 부스도 많이 오세요">
@@ -64,7 +64,7 @@ ga('send', 'pageview');
 
 
 
-    <script src="http://vjs.zencdn.net/4.0/video.js"></script>
+    <script src="https://vjs.zencdn.net/4.0/video.js"></script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script>
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
@@ -201,7 +201,7 @@ ga('send', 'pageview');
 <p>일차 논리인 특정한 언어는 두 가지로 나누어서 생각할 수 있는데 proof system과 syntax다. Syntax는 특정 언어가 다른 일차 논리와 다르게 이 언어에서만 사용되는 기호들을 의미한다. 예를 들어 덧셈의 + 기호는 집합에서 사용되지 않으므로 syntax라고 할 수 있다. 두번째로 proof system는 가장 중요하다고 할 수 있는데 Theory(어떠한 formula로 axiom과 같은 의미다. 이 문서에서는 Theorem과 Theory로 나누어서 사용하겠다.)로부터 Theorem을 이끌어내는 추론 방식이다. 유명한 proof system에는 Hilbert style과 Natural Deduction(Sequent Calculus)등이 있는데 우리가 일반적으로 알고 있는 proof system이 Natural Deduction이므로 이 문서에서는 Natural Deduction을 가정하고 작성하겠다.</p>
 <p>이제 일차 논리의 성질들에 대해서 알아보자.<br>We said $\mathcal{L}$-theory $\mathcal{T}$ is consistent, $Con(\mathcal{T})$, if there is no $A \in \mathcal{L} _ {S}$ s.t. $\mathcal{T} \vdash A$ and $\mathcal{T} \vdash \neg A$.<br>Also, we said $\mathcal{L}$-theory $\mathcal{T}$ is complete if for $^{\forall} A\ \in \mathcal{L}_{S}$, $\mathcal{T} \vdash A$ or $\mathcal{T} \vdash \neg A$, but not both.</p>
 <p>즉 어떤 Theory $\mathcal{T}$가 complete하면 consistent를 만족하는 것이다.<br>그런데 괴델의 불완전성 정리에 의하면 모든 일차 논리의 Theory는 complete하지 않는다.<br>즉, 항상 Theory와 independent한, 증명불가능인, Theorem이 존재한다는 것이다.<br>그래서 일반적으로 자동정리증명 프로그램은 증명 불가능한 명제를 고려하지 않는다.<br>증명불가능의 예시를 보기 위해 ZFC에 대해 알아보자.</p>
-<h2 id="ZFC"><a href="#ZFC" class="headerlink" title="ZFC"></a>ZFC</h2><p>ZFC(Zermelo–Fraenkel with axiom of choice)는 가장 유명한 집합 공리계로 유한한 공리계의 대표 예시라고 할 수 있다. ZFC에는 확장 공리(axiom of extensionality), 정칙성 공리(axiom of regularity), 짝 공리(axiom of pairing), 합집합 공리(axiom of union), 멱집합 공리(axiom of power set), 무한 공리(axiom of infinity), 분류 공리꼴(axiom schema of specification), 치환 공리꼴(axiom schema of replacement), 그리고 선택 공리(axiom of choice)로 이루어져있다. 사실 집합 공리의 경우 간단하게 표현이 가능하지 않을까라고 생각하기 쉽지만 Russel의 패러독스를 보면 생각이 바뀔 것이다. 이렇게 수학자들이 고심하여 열심히 만든 공리계 ZFC조차 증명 불가능한 Theorem들이 있는데 대표적인 예시가 연속체 가설(continuum hypothesis)이다. 이 문제는 자연수 집합의 크기와 실수 집합의 크기 사이의 크기를 가지는 무한 집합이 존재하는 가에 대한 문제로(또는 $2^{\aleph_0}=\aleph_1$으로 이해할 수도 있다.) 증명불가능이 증명되었다.</p>
+<h2 id="ZFC"><a href="#ZFC" class="headerlink" title="ZFC"></a>ZFC</h2><p>ZFC(Zermelo–Fraenkel with axiom of Choice)는 가장 유명한 집합 공리계로 유한한 공리계의 대표 예시라고 할 수 있다. ZFC에는 확장 공리(axiom of extensionality), 정칙성 공리(axiom of regularity), 짝 공리(axiom of pairing), 합집합 공리(axiom of union), 멱집합 공리(axiom of power set), 무한 공리(axiom of infinity), 분류 공리꼴(axiom schema of specification), 치환 공리꼴(axiom schema of replacement), 그리고 선택 공리(axiom of choice)로 이루어져있다. 사실 집합 공리의 경우 간단하게 표현이 가능하지 않을까라고 생각하기 쉽지만 Russel의 패러독스를 보면 생각이 바뀔 것이다. 이렇게 수학자들이 고심하여 열심히 만든 공리계 ZFC조차 증명 불가능한 Theorem들이 있는데 대표적인 예시가 연속체 가설(continuum hypothesis)이다. 이 문제는 자연수 집합의 크기와 실수 집합의 크기 사이의 크기를 가지는 무한 집합이 존재하는 가에 대한 문제로(또는 $2^{\aleph_0}=\aleph_1$으로 이해할 수도 있다.) 증명불가능이 증명되었다.</p>
 <p>만약 이 글을 읽고 자동정리증명에 흥미가 생겼다면 이번 SAF의 KSATP 부스에서 더 자세한 설명을 들을 수 있다.</p>
 <hr>
 <p><strong style="font-size:1.2em;">16-010 김기환</strong><br><strong>(Ki-Hwan Kim | atheNa)</strong><br>– Follower of Blizzard corp. (EOS 16)<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:jerry010222@naver.com" target="_blank" rel="noopener">jerry010222@naver.com</a></i></p>
@@ -212,7 +212,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/09/Automatic-Theorem-Proving-Intro/" data-id="cjgzblhqt000cc8umsqtuawqw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/09/Automatic-Theorem-Proving-Intro/" data-id="cjgzs7dku0000zsumes5naxnh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
