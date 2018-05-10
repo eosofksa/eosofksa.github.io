@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/</loc>
+        <lastmod>2018-05-10T00:57:27.556Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/</loc>
         <lastmod>2018-05-10T00:34:05.222Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +41,6 @@
     <url>
         <loc>http://eosofksa.github.io/2018/05/10/Game-made-by-game/</loc>
         <lastmod>2018-05-09T16:07:20.309Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/</loc>
-        <lastmod>2018-05-09T16:07:06.701Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
