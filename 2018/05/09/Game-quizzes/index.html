@@ -69,11 +69,12 @@ ga('send', 'pageview');
     <script type="text/javascript">
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
-      Kakao.Link.sendCustom({
+      Kakao.Link.sendScrap({
         templateId: 9469,
         requestUrl: encodedUrl,
         templateArgs:{
-          'title': 'EOS'
+          'title': 'EOS',
+          'name': '?'
         }
       });
     }
@@ -217,7 +218,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/09/Game-quizzes/" data-id="cjgzzyczp0001csum3mkec3lk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/09/Game-quizzes/" data-id="cjh062ahj0004foumyfl8bwlh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
