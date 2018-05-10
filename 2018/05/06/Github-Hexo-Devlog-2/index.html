@@ -18,7 +18,7 @@
 <meta property="og:description" content="GitHub + Hexo 개발일지 下 - 부가기능 추가 / 적용">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-10T01:42:39.692Z">
+<meta property="og:updated_time" content="2018-05-10T03:18:07.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github + Hexo 개발일지 下 | EOS">
 <meta name="twitter:description" content="GitHub + Hexo 개발일지 下 - 부가기능 추가 / 적용">
@@ -70,7 +70,11 @@ ga('send', 'pageview');
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
       Kakao.Link.sendScrap({
-        requestUrl: encodedUrl
+        templateId: 9469,
+        requestUrl: encodedUrl,
+        templateArgs:{
+          'title': 'EOS'
+        }
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -206,7 +210,7 @@ ga('send', 'pageview');
 <p>계속 리디렉션이 감지됨이라고 뜨는 것으로 보아 hexo에서 페이지를 처리할 때 기본적으로 리디렉션을 한 번은 거치는 듯 하다. 아마 바뀐 링크에 대해서 리디렉션을 정의해줄 수 있기에 정의가 되지 않은 경우는 셀프 리디렉션이 이루어지는 것으로 추측 중…</p>
 </blockquote>
 <p>위 현상의 원인을 찾았다. 페이지 URL을 입력할 때 http:// 로 입력을 하여 https:// 로 리디렉션되는 과정이 걸리는 것이었다.<br>참고) [ <a href="http://futurecreator.github.io/2016/06/15/hexo-google-site-search-console-analytics/" target="_blank" rel="noopener">http://futurecreator.github.io/2016/06/15/hexo-google-site-search-console-analytics/</a> ]</p>
-<h6 id="2018-05-10"><a href="#2018-05-10" class="headerlink" title="~ 2018.05.10"></a>~ 2018.05.10</h6><p>페이지 내에 여러가지 추가할 수 있는 것이 많은데, 대표적인 것이 방문자 통계이다. 2018 SAF를 목표로 시작한 프로젝트기에 SAF 기간 동안의 최초 접속자 수를 기록하고자 설정하였다. 홍보 이전에 접속하는 사람들이 있을 수 있으나, 9:56AM 현재까진 없었다.</p>
+<h5 id="2018-05-10"><a href="#2018-05-10" class="headerlink" title="~ 2018.05.10"></a>~ 2018.05.10</h5><p>페이지 내에 여러가지 추가할 수 있는 것이 많은데, 대표적인 것이 방문자 통계이다. 2018 SAF를 목표로 시작한 프로젝트기에 SAF 기간 동안의 최초 접속자 수를 기록하고자 설정하였다. 홍보 이전에 접속하는 사람들이 있을 수 있으나, 9:56AM 현재까진 없었다.</p>
 <p><img src="/images/Github-Hexo-DevLog-2-Google_analytics.png" alt="SAF 기간인 2018.05.10 ~ 2018.05.12 동안의 최초 방문일의 사용자를 기록한다."></p>
 <p>이유를 찾지 못했으나 구글에 eosofksa.github.io를 검색하면 링크는 올바르게 나오나 제목이 [GitHub + Hexo 개발일지 下]라고 나온다. 한국 검색 결과에는 한글이 들어간 텍스트를 조합하여 구글이 알아서 추가한다는 얘기가 있는데, 이 이유에 해당하는 것 같아 페이지 제목을 [EOS]에서 [EOS of KSA | 한국과학영재학교의 컴퓨터 클럽]으로 변경하였다. 바로 적용되지는 않는 듯하다ㅜ</p>
 <h4 id="Open-Graph"><a href="#Open-Graph" class="headerlink" title="Open Graph"></a>Open Graph</h4><p>open_graph 속성에 대해 궁금해하던 중 다행히 위 블로그에서 이에 대한 내용을 다루었길래 참고하였다. 무엇인지와 어떻게 하는지에 대해서는 잘 정리된 아래 링크에서 알아보자. 이 블로그의 경우 <code>head.ejs</code>에서 <code>og:image</code>를 따로 제작한 이미지로 우회시키고, <code>og:title</code>에서 글 제목 뒤에 <code>“ | EOS”</code>가 붙도록 하였다.<br>참고) [ <a href="http://futurecreator.github.io/2016/06/16/opengraph-social-meta-tag/" target="_blank" rel="noopener">http://futurecreator.github.io/2016/06/16/opengraph-social-meta-tag/</a> ]</p>
@@ -224,7 +228,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/" data-id="cjgzyjiu50005coumnghuwrim" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/" data-id="cjgzzgala000a1kumtmzikvl0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

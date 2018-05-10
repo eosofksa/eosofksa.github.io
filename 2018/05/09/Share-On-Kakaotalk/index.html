@@ -18,7 +18,7 @@
 <meta property="og:description" content="상황은 이해가 가지만 참 힘들게 한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-10T00:34:05.222Z">
+<meta property="og:updated_time" content="2018-05-10T03:38:08.213Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 블로그에 카카오톡으로 공유 추가하기 | EOS">
 <meta name="twitter:description" content="상황은 이해가 가지만 참 힘들게 한다.">
@@ -70,7 +70,11 @@ ga('send', 'pageview');
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
       Kakao.Link.sendScrap({
-        requestUrl: encodedUrl
+        templateId: 9469,
+        requestUrl: encodedUrl,
+        templateArgs:{
+          'title': 'EOS'
+        }
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -207,7 +211,7 @@ ga('send', 'pageview');
 <p>을 발견할 수 있다. 그렇다면 카톡도 저런 링크를 찾으면 되겠다! 라는 희망을 품고 다른 대안을 찾기 위해 <a href="https://developers.kakao.com" target="_blank" rel="noopener">KakaoDevelopers_</a>를 들어가 보았다. 그리고 절망을 보았다.</p>
 <p><a href="https://developers.kakao.com/docs/js/kakaotalklink" target="_blank" rel="noopener">https://developers.kakao.com/docs/js/kakaotalklink</a></p>
 <ul>
-<li>카카오톡 공유 형태의 다양한 버전이 제시되어 있고 각각의 javascript 코드가 제시되어 있다. 역시나 저런 URL은 없었다. 뭐 어쨌든 코드를 보면 넣어줘야 하는 정보들이 많은 레이아웃이 있고 적은 레이아웃이 있다. 이 페이지의 경우 스크랩 템플릿이 가장 적합할 것으로 판단되어 이를 사용하기로 하였다. (절대로 요구하는 Argument의 수가 제일 적어서는 아니다)</li>
+<li>카카오톡 공유 형태의 다양한 버전이 제시되어 있고 각각의 javascript 코드가 제시되어 있다. 역시나 <strong>저런</strong> URL은 없었다. 뭐 어쨌든 코드를 보면 넣어줘야 하는 정보들이 많은 레이아웃이 있고 적은 레이아웃이 있다. 이 페이지의 경우 스크랩 템플릿이 가장 적합할 것으로 판단되어 이를 사용하기로 하였다. (절대로 요구하는 Argument의 수가 제일 적어서는 아니다)</li>
 </ul>
 <p>일단 기본 상식 선에서 href에 <code>javascript:sendLink(arg)</code>의 형태로 처리하면 될지도 모른다는 판단이 섰다. 그러면 이제 문제가 되는 부분은 저 스크립트를 어디에 어떻게 넣어야 하는가이다. 이 때 구조 삽질이 빛을 발하는데, 최종적으로 생성되는 html의 글 부분은 <code>article.ejs</code>이 결정한다. 공유와 관련한 부분을 찾아보면<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer <span class="class"><span class="keyword">class</span></span>=<span class="string">"article-footer"</span>&gt;</span><br><span class="line">    &lt;%- partial(<span class="string">'share/index'</span>, &#123; <span class="attr">post</span>: post &#125;) %&gt;</span><br><span class="line">&lt;<span class="regexp">/footer&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>을 발견할 수 있다. 즉, <code>share/index.ejs</code>가 연결됨을 알 수 있다. 그래서 보면<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!theme.share || theme.share === <span class="string">'default'</span>) &#123; %&gt;</span><br><span class="line">    &lt;%- partial(<span class="string">'default'</span>, &#123; <span class="attr">post</span>: post &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure></p>
@@ -230,6 +234,9 @@ ga('send', 'pageview');
 </blockquote>
 <p>폰으로 들어가서 안 뜨는걸 보고 절망하고 있었는데 떴다. 그냥 크사파이가 느렸던걸로…<br>여튼 인터넷이 느리면 카톡이 로딩되는 속도도 영향을 받는 듯 하다.</p>
 <p>카톡 아이콘 노란색은 볼 수록 괜찮아서 일단 두기로 했다.</p>
+<h4 id="12-10-PM"><a href="#12-10-PM" class="headerlink" title="12:10 PM"></a>12:10 PM</h4><p>블로그 title을 바꾼 후에 카카오톡 공유를 했더니 title이 길어서 [EOS에서 확인]이 [EOS of KSA | 한국과학영재학교의 …]로 표기되기 시작했다….<br>그래서 커스텀 템플릿을 써보기로 하였다. title만을 위해서 하는 건 뭔가 비효율적인 것 같지만 그래도 언젠간 쓸모가 있겠지.</p>
+<p><img src="/images/Share-On-Kakaotalk-Kakaotalk_Custom_Template.png" alt="템플릿은 최대한 심플하게 했다"></p>
+<p>코드는 아래와 같이 템플릿 아이디를 명시해주고, title만 templateArgs로 따로 처리해주었다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Kakao.init(<span class="string">'5a4e0a58ac25b0dc3df9fb0c9fc72828'</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sendLink</span>(<span class="params">encodedUrl</span>) </span>&#123;</span><br><span class="line">  Kakao.Link.sendScrap(&#123;</span><br><span class="line">    templateId: <span class="number">9469</span>,</span><br><span class="line">    requestUrl: encodedUrl,</span><br><span class="line">    templateArgs:&#123;</span><br><span class="line">      <span class="string">'title'</span>: <span class="string">'EOS'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p><strong style="font-size:1.2em;">16-077 이원준</strong><br><strong>(Won-Joon Lee | sni/J)</strong><br>– 그림 그리는 개발자 / Designer of EOS 16<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:wjl0316@naver.com" target="_blank" rel="noopener">wjl0316@naver.com</a></i>, <i class="icon fa fa-instagram" style="font-size:1em;"> <a href="https://instagr.am/sniperj_got_ya_back" target="_blank" rel="noopener">sniperj_got_ya_back</a></i>, <i class="icon fa fa-facebook" style="font-size: 1em;"> <a href="https://facebook.com/wonjoonlee0316" target="_blank" rel="noopener">WonJoonLee0316</a></i>, <i class="icon fa fa-github" style="font-size: 1em;"> <a href="https://github.com/sni-j" target="_blank" rel="noopener">sni-J</a></i></p>
 
@@ -239,7 +246,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/" data-id="cjgzyjiub000bcoumfnrxnzqf" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/" data-id="cjgzzgalb000b1kumdp58c9x1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

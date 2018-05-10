@@ -70,7 +70,11 @@ ga('send', 'pageview');
     Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
     function sendLink(encodedUrl) {
       Kakao.Link.sendScrap({
-        requestUrl: encodedUrl
+        templateId: 9469,
+        requestUrl: encodedUrl,
+        templateArgs:{
+          'title': 'EOS'
+        }
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
@@ -212,7 +216,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/09/Automatic-Theorem-Proving-Intro/" data-id="cjgzyjiu00001coumu3oz0jpi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/09/Automatic-Theorem-Proving-Intro/" data-id="cjgzzgakv00001kumen5b6c6d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
