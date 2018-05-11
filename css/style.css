@@ -1133,9 +1133,6 @@ a.article-title:hover {
   white-space: normal;
   word-break: keep-all;
 }
-.article-entry strong {
-  white-space: nowrap;
-}
 .article-entry h1,
 .article-entry h2,
 .article-entry h3,
@@ -1502,6 +1499,9 @@ a.article-title:hover {
 .article.rtl .article-meta .category a:first-child,
 .article.rtl .article-meta .category i:first-child {
   margin-left: 0;
+}
+.nametag_bold {
+  white-space: nowrap;
 }
 .lg-outer .lg-thumb-item {
   border-radius: 0 !important;
