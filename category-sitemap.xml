@@ -43,14 +43,21 @@
 
     <url>
         <loc>http://eosofksa.github.io/categories/KSA-16/</loc>
-        <lastmod>2018-05-10T16:44:08.392Z</lastmod>
+        <lastmod>2018-05-11T05:31:17.189Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://eosofksa.github.io/categories/KSA-16/16-045-Hong-Geun-Park/</loc>
-        <lastmod>2018-05-10T16:44:08.392Z</lastmod>
+        <lastmod>2018-05-11T05:31:17.189Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/Notice/</loc>
+        <lastmod>2018-05-11T06:00:50.073Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
