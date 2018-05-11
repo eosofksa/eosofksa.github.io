@@ -242,6 +242,13 @@ code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   background-color: #444;
 }
+strong {
+  white-space: nowrap;
+}
+p {
+  white-space: normal;
+  word-break: keep-all;
+}
 .container {
   position: relative;
   padding: 0 20px;
