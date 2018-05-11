@@ -18,7 +18,7 @@
 <meta property="og:description" content="상황은 이해가 가지만 참 힘들게 한다.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-10T12:02:49.255Z">
+<meta property="og:updated_time" content="2018-05-11T16:52:14.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 블로그에 카카오링크 추가하기 | EOS">
 <meta name="twitter:description" content="상황은 이해가 가지만 참 힘들게 한다.">
@@ -219,7 +219,7 @@ ga('send', 'pageview');
 <p>script는 왠만하면 head에 import하라</p>
 </blockquote>
 <p>그래서 <code>head.ejs</code>로 갔다. 아래에 보니 js를 import하는 구간이 있다.<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- js(<span class="string">'libs/jquery/2.0.3/jquery.min'</span>) %&gt;</span><br><span class="line">&lt;%- partial(<span class="string">'plugin/scripts'</span>, &#123; <span class="attr">isHead</span>: <span class="literal">true</span> &#125;) %&gt;</span><br></pre></td></tr></table></figure></p>
-<p>신나서 넣었다. 됐다!<br>+) 여담으로 중간에 뭘 잘못했는지 deploy 이후에 css가 깨지는 문제가 발생했다. 아마 붙여넣는 부분에서 뭔가를 잘라먹고 붙였던 것 같다. 한순간 멘탈이 X박살 났지만 부여잡고 롤백하고 차분하게 하나씩 했더니 됐다.</p>
+<p>신나서 넣었다. 됐다!<br>+) 여담으로 중간에 뭘 잘못했는지 deploy 이후에 css가 깨지는 문제가 발생했다. 아마 붙여넣는 부분에서 뭔가를 잘라먹고 붙였던 것 같다. 한순간 멘탈이 박살 났지만 부여잡고 롤백하고 차분하게 하나씩 했더니 됐다.</p>
 <h4 id="외관"><a href="#외관" class="headerlink" title="외관"></a>외관</h4><p>여하튼 그래서 저 <code>default.ejs</code>에<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;&lt;a href=&quot;javascript:sendLink(\&apos;&apos; + url + &apos;\&apos;)&quot; class=&quot;article-share-kakaotalk&quot; target=&quot;_blank&quot; title=&quot;Kakaotalk&quot;&gt;&lt;/a&gt;&apos;</span><br></pre></td></tr></table></figure></p>
 <p>를 추가해주었더니 <code>article-share-kakaotalk</code>이 없다.(;;;)</p>
 <p>그래서 <code>article-share-facebook</code>를 찾아서 <code>article.styl</code>을 보니 비교적 구조가 단순하길래 복붙해서 하나 만들고 보니 아이콘이 애매했다. font-awesome 아이콘들은 대체로 fa-XXX로 표현되는데 <code>\f0XX</code>형태라서 살짝 당황했지만 인터넷에 표를 찾아보니 금방 나오더라. 카톡 아이콘은 없기에 비슷한 말풍선 모양인 comment(\f075)로 결정<br>색은 <code>color-XXX</code>로 되어있길래 어디에 있나 했더니 <code>_varaibles.styl</code>에 있길래 카톡 아이콘 끌어다놓고 노란색 따서 color-kakaotalk을 만들었다. 노란색 해보니 안 카톡스러운 것 같아 갈색으로 바꿀까 생각 중…</p>
@@ -241,7 +241,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/" data-id="cjh274bhy000brwum4lksvuey" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/" data-id="cjh279tha000biwum614l3q3o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

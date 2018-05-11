@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/</loc>
+        <lastmod>2018-05-11T16:52:14.426Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/</loc>
-        <lastmod>2018-05-11T16:25:52.465Z</lastmod>
+        <lastmod>2018-05-11T16:52:03.064Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -57,14 +65,6 @@
     <url>
         <loc>http://eosofksa.github.io/2018/05/10/%ED%82%A4%EB%B3%B4%EB%93%9C%EB%8A%94-%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-%EC%83%9D%EA%B2%BC%EC%9D%84%EA%B9%8C-1/</loc>
         <lastmod>2018-05-10T14:54:37.563Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/2018/05/09/Share-On-Kakaotalk/</loc>
-        <lastmod>2018-05-10T12:02:49.255Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
