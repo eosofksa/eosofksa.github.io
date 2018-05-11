@@ -233,13 +233,6 @@ body {
   font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
-body strong {
-  white-space: nowrap;
-}
-body p {
-  white-space: normal;
-  word-break: keep-all;
-}
 code {
   margin: 0 2px;
   color: #e96900;
@@ -1135,6 +1128,13 @@ a.article-title:hover {
 .article-entry p,
 .article-entry table {
   margin: 1.6em 0;
+}
+.article-entry p {
+  white-space: normal;
+  word-break: keep-all;
+}
+.article-entry strong {
+  white-space: nowrap;
 }
 .article-entry h1,
 .article-entry h2,
