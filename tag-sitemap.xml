@@ -16,13 +16,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/tags/DevLog/</loc>
-        <lastmod>2018-05-10T12:02:49.255Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/tags/Hardware/</loc>
         <lastmod>2018-05-10T14:54:37.563Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -46,6 +39,13 @@
     <url>
         <loc>http://eosofksa.github.io/tags/Game/</loc>
         <lastmod>2018-05-11T07:54:49.085Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/tags/DevLog/</loc>
+        <lastmod>2018-05-11T16:25:52.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

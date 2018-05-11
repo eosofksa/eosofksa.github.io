@@ -21,13 +21,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/KSA-16/16-077-Won-Joon-Lee/</loc>
-        <lastmod>2018-05-10T12:02:49.255Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/categories/KSA-16/16-120-Sung-Beum-Hong/</loc>
         <lastmod>2018-05-10T14:54:48.451Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -42,13 +35,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/KSA-16/</loc>
-        <lastmod>2018-05-11T07:54:49.085Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/categories/KSA-16/16-065-Yo-Han-Yoon/</loc>
         <lastmod>2018-05-11T07:54:49.085Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,6 +44,20 @@
     <url>
         <loc>http://eosofksa.github.io/categories/Notice/</loc>
         <lastmod>2018-05-11T08:17:08.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/KSA-16/</loc>
+        <lastmod>2018-05-11T16:25:52.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/KSA-16/16-077-Won-Joon-Lee/</loc>
+        <lastmod>2018-05-11T16:25:52.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
