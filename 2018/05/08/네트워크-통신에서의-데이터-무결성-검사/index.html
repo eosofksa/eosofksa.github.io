@@ -18,7 +18,7 @@
 <meta property="og:description" content="네트워크 통신에서의 데이터 무결성 검사 ··· Checksum">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-09T15:33:29.818Z">
+<meta property="og:updated_time" content="2018-05-26T18:18:56.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="네트워크 통신에서의 데이터 무결성 검사 | EOS">
 <meta name="twitter:description" content="네트워크 통신에서의 데이터 무결성 검사 ··· Checksum">
@@ -74,7 +74,6 @@ ga('send', 'pageview');
       });
     }
     </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
 </head>
 
 <body>
@@ -102,7 +101,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Notice/">-Notice-</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/">KSA 16</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/KSA-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Notice/">-Notice-</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/">EOS 16</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a></li></ul></li></ul>
                                     
                         </ul>
                         <nav id="sub-nav">
@@ -158,7 +157,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/KSA-16/">KSA 16</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/KSA-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a>
+    <a class="page-title-link" href="/categories/EOS-16/">EOS 16</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -317,7 +316,7 @@ ga('send', 'pageview');
 <p>0과 1로 이루어진 임의의 문장을 생성하고, 각 bit에 대해 동일하게 변조될 확률을 부여한다. 이를 통해 각 케이스 당 10번, 그리고 각 시도 당 10000번 $f(m’)=c’$여부를 확인하여 확률을 도출해냈다. Checksum bit를 2배로 늘려가며 같은 시행을 총 4번 반복하였고, 이를 통해 값들이 서로 지수적인 관계를 가진다는 것을 보이려했다.</p>
 <p>2017학년도 1학기에 해보았던 것이라 구체적으로 설정했던 $m$의 length와 각 bit의 변조 확률은 기억나지 않는다. (아쉽게도 소스 코드를 폐기한듯..) 하지만 위 실험 결과로 미루어 보아 위에서 강조한 내용이 맞는 것을 확인할 수 있다..!</p>
 <p><strong>즉, 어떤 메시지를 수신한 후, 그에 해당하는 $m’$과 $c’$에 대해 $f(m’)=c’$이 아닐경우 이를 reject하고 다시 같은 요청을 보내는데, 변조된 메시지가 이 과정을 통과할 가능성은 checksum의 길이에 따라 급격히 줄어드는 것이다.</strong></p>
-<p>실제로 인터넷 통신 시스템이나 마이크로프로세서 시스템 내부 명령에서의 오류 검증에 checksum이 사용되며, 그 정확성은 확률로서 보장한다. 이런 간단한 방식으로 완전한 데이터 통신을 보장할 수 있다는 점이 실로 놀랍다! 관심있는 사람은 확률을 통해 정확성을 보장하는 비슷한 방식의 <a href="https://ko.wikipedia.org/wiki/영지식_증명" target="_blank" rel="noopener">영지식 증명 프로토콜(ZKP)</a>도 함께 살펴보면 좋을 것 같다.</p>
+<p>실제로 인터넷 통신 시스템이나 마이크로프로세서 시스템 내부 명령에서의 오류 검증에 checksum이 사용되며, 그 정확성은 확률로서 보장한다. 이런 간단한 방식으로 완전한 데이터 통신을 보장할 수 있다는 점이 실로 놀랍다! 관심있는 사람은 확률을 통해 정확성을 보장하는 비슷한 방식의 <a href="http://eosofksa.github.io/2018/05/10/Zero-Knowledge-Proof/">영지식 증명 프로토콜(ZKP)</a>도 함께 살펴보면 좋을 것 같다.</p>
 <hr>
 <p><strong style="font-size:1.2em;">16-001 강래현</strong><br><strong class="nametag_bold">(Rae-Hyun Kang | Sharp)</strong><br>– Leader of EOS 16<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:krh000314@gmail.com" target="_blank" rel="noopener">krh000314@gmail.com</a></i>, <i class="icon fa fa-facebook" style="font-size: 1em;"> <a href="https://facebook.com/krh0314" target="_blank" rel="noopener">krh0314</a></i>, <i class="icon fa fa-github" style="font-size:1em;"> <a href="https://github.com/RHKang" target="_blank" rel="noopener">RHKang</a></i></p>
 
@@ -327,7 +326,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/" data-id="cjh3iezw9000knkumsvslkvhj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/" data-id="cjhlodb2e000nt0umwsgmfztt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -474,7 +473,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notice/">-Notice-</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/">KSA 16</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/KSA-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notice/">-Notice-</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/">EOS 16</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -484,7 +483,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">13</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">14</span></li></ul>
         </div>
     </div>
 
@@ -494,7 +493,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR-Augmented-Reality/">AR (Augmented Reality)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ATP-Automatic-Theorem-Proving/">ATP (Automatic Theorem Proving)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevLog/">DevLog</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network-Communication/">Network Communication</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zero-Knowledge-Proof-영지식증명/">Zero Knowledge Proof / 영지식증명</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR-Augmented-Reality/">AR (Augmented Reality)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ATP-Automatic-Theorem-Proving/">ATP (Automatic Theorem Proving)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevLog/">DevLog</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network-Communication/">Network Communication</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zero-Knowledge-Proof-영지식증명/">Zero Knowledge Proof / 영지식증명</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -526,7 +525,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <p>&copy; 2018 EOS</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a>. Modified by <a href="//instagr.am/sniperj_got_ya_back">KSA 16-077 Won-Joon Lee</a></p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a>. Modified by <a href="//instagr.am/sniperj_got_ya_back">EOS 16-077 Won-Joon Lee</a></p>
             </div>
         </div>
     </div>

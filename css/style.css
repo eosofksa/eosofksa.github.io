@@ -896,19 +896,22 @@ code {
 }
 .category-list-count,
 .tag-list-count,
-.archive-list-count {
+.archive-list-count,
+.author-list-count {
   padding-left: 5px;
   color: #aaa;
   font-size: 0.85em;
 }
 .category-list-count:before,
 .tag-list-count:before,
-.archive-list-count:before {
+.archive-list-count:before,
+.author-list-count:before {
   content: "(";
 }
 .category-list-count:after,
 .tag-list-count:after,
-.archive-list-count:after {
+.archive-list-count:after,
+.author-list-count:after {
   content: ")";
 }
 .tagcloud a {
