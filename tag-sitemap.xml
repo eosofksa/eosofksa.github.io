@@ -23,6 +23,13 @@
     </url>
 
     <url>
+        <loc>http://eosofksa.github.io/tags/DevLog/</loc>
+        <lastmod>2018-05-25T09:30:59.004Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://eosofksa.github.io/tags/Zero-Knowledge-Proof-%EC%98%81%EC%A7%80%EC%8B%9D%EC%A6%9D%EB%AA%85/</loc>
         <lastmod>2018-05-25T09:31:06.592Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -39,13 +46,6 @@
     <url>
         <loc>http://eosofksa.github.io/tags/Hardware/</loc>
         <lastmod>2018-05-27T17:19:38.443Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/tags/DevLog/</loc>
-        <lastmod>2018-05-31T03:35:11.669Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
