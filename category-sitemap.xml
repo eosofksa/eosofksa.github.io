@@ -35,13 +35,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-045-Hong-Geun-Park/</loc>
-        <lastmod>2018-05-25T09:31:06.592Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/categories/EOS-16/16-001-Rae-Hyun-Kang/</loc>
         <lastmod>2018-05-26T18:18:56.808Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,15 +42,22 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/</loc>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-120-Sung-Beum-Hong/</loc>
         <lastmod>2018-05-27T17:19:38.443Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-120-Sung-Beum-Hong/</loc>
-        <lastmod>2018-05-27T17:19:38.443Z</lastmod>
+        <loc>http://eosofksa.github.io/categories/EOS-16/</loc>
+        <lastmod>2018-06-04T02:21:04.447Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-045-Hong-Geun-Park/</loc>
+        <lastmod>2018-06-04T02:21:04.447Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

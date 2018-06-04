@@ -18,7 +18,7 @@
 <meta property="og:description" content="Zero Knowledge Proof / 영지식증명">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-25T09:31:06.592Z">
+<meta property="og:updated_time" content="2018-06-04T02:21:04.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="증명 없는 증명 | EOS">
 <meta name="twitter:description" content="Zero Knowledge Proof / 영지식증명">
@@ -227,8 +227,8 @@ ga('send', 'pageview');
 <p>마지막으로 Zero-knowledeness를 만족한다는 것을 보이기 전에 zero-knowledgeness의 비교적 엄밀한 정의를 설명하고자 한다. 모든 fake verifier에 대하여 어떤 TM(turing machine)이 존재하여 $\{\langle P, V^{*} \rangle (x)\}_{x \in L}$과 $\{M^{*}(x)\}_{x\in L} $가 computationally indistinguishable 하다면 computational zero-knowledge라고 한다. 이걸 좀 더 쉽게 설명하자면 어떤 simulator M이 있어서 fake verifier가 prover와 주고 받는 모든 내용을 simulate할 수 있다는 것이다. 즉, proof를 모르고 있는 어떤 simulator가 대화를 완벽히 재현할 수 있으므로 fake verifier가 영지식증명 과정에서 proof에 대한 아무런 정보도 얻을 수가 없다는 것이다.</p>
 <p>다시 G3C문제로 돌아와서 위의 과정이 (computational) zero-knowledge를 만족한다는 것을 보이자. 어떤 fake verifier $V^{*}$에 대하여 다음을 과정으로 simulate한다면 fake verifier와 prover의 영지식증명을 simulate할 수 있다는 것을 알 수 있다.</p>
 <ol>
-<li>무작위로 $(u‘,v‘)\in E$를 고른다.</li>
-<li>무작위로 $a‘_{u} \ne a’_{v}$인 $a’_{u}, a’_{v} \in [3]$을 고른다.</li>
+<li>무작위로 $(u’,v’)\in E$를 고른다.</li>
+<li>무작위로 $a’_{u} \ne a’_{v}$인 $a’_{u}, a’_{v} \in [3]$을 고른다.</li>
 <li>$^{\forall} w \in V\setminus\{u’,v’\}$에 대하여 $a’_{w}$를 1로 설정한다.</li>
 <li>$(u,v)$를 $V^{*}$으로부터의 대답으로 설정한다.</li>
 <li>만약 $(u,v) = (u’, v’)$이라면 두 색을 공개한다.</li>
@@ -236,7 +236,7 @@ ga('send', 'pageview');
 <li>$|V||E|$번의 반복 후에 simulator 과정에서 실패한 경우가 있다면 F를 return한다.</li>
 </ol>
 <p>예시로 사용된 Graph 3-colorability처럼 수많은 수학적 명제는 이와 같은 방식으로 영지식증명을 사용할 수 있다.</p>
-<p>사실 영지식증명의 엄밀한 정의는 zero-knowledge의 조건을 설명할 때 사용한 probability를 이용한 정의를 가진다. 확률공간을 사용하여 정의된 영지식증명은 매우 어렵지만 관심이 있다면 밑의 첨부파일을 참고하길 바란다.</p>
+<p>사실 영지식증명의 엄밀한 정의는 zero-knowledge의 조건을 설명할 때 사용한 probability를 이용하여 정의한다. 확률공간을 사용하여 정의된 영지식증명은 매우 어렵지만 관심이 있다면 밑의 첨부파일을 참고하길 바란다.</p>
 <hr>
 <p>첨부파일 ∣ <a href="/uploadfiles/Zero-Knowledge-Proof-lec12_zkp.pdf" target="\_blank"> lec12_zkp.pdf </a> ∣ <a href="/uploadfiles/Zero-Knowledge-Proof-prob_basic.pdf" target="\_blank"> prob_basic.pdf </a><br><i class="icon fa fa-exclamation"></i> 위 파일의 모든 저작권은 한국과학영재학교 윤상현 선생님께 있습니다.<br><i class="icon fa fa-exclamation"></i> 위 파일들은 허가 없이 변형, 복제 및 배포 등의 사용을 할 수 없습니다.</p>
 <hr>
@@ -248,7 +248,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/10/Zero-Knowledge-Proof/" data-id="cjhvhlkp1000e48umgdwhts9o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/10/Zero-Knowledge-Proof/" data-id="cjhzmpu3k000bbgum94cxnywh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
