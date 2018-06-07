@@ -7,29 +7,8 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/Notice/</loc>
-        <lastmod>2018-05-25T09:29:38.619Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/categories/EOS-16/16-010-Ki-Hwan-Kim/</loc>
         <lastmod>2018-05-25T09:30:25.704Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-065-Yo-Han-Yoon/</loc>
-        <lastmod>2018-05-25T09:30:32.472Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-077-Won-Joon-Lee/</loc>
-        <lastmod>2018-05-25T09:30:59.004Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -49,15 +28,36 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/</loc>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-045-Hong-Geun-Park/</loc>
         <lastmod>2018-06-04T02:23:04.649Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-045-Hong-Geun-Park/</loc>
-        <lastmod>2018-06-04T02:23:04.649Z</lastmod>
+        <loc>http://eosofksa.github.io/categories/Notice/</loc>
+        <lastmod>2018-06-07T07:35:41.547Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-077-Won-Joon-Lee/</loc>
+        <lastmod>2018-06-07T12:23:12.958Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/EOS-16/</loc>
+        <lastmod>2018-06-07T12:27:34.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-065-Yo-Han-Yoon/</loc>
+        <lastmod>2018-06-07T12:27:34.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

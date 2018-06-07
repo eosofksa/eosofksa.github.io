@@ -16,20 +16,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/tags/Game/</loc>
-        <lastmod>2018-05-25T09:30:32.472Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/tags/DevLog/</loc>
-        <lastmod>2018-05-25T09:30:59.004Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/tags/Network-Communication/</loc>
         <lastmod>2018-05-26T18:18:56.808Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -46,6 +32,20 @@
     <url>
         <loc>http://eosofksa.github.io/tags/Zero-Knowledge-Proof-%EC%98%81%EC%A7%80%EC%8B%9D%EC%A6%9D%EB%AA%85/</loc>
         <lastmod>2018-06-04T02:23:04.649Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/tags/DevLog/</loc>
+        <lastmod>2018-06-07T12:23:12.958Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/tags/Game/</loc>
+        <lastmod>2018-06-07T12:27:34.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

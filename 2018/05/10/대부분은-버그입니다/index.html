@@ -18,7 +18,7 @@
 <meta property="og:description" content="히트를 친 Top 5 게임 속 버그들">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
-<meta property="og:updated_time" content="2018-05-25T09:29:59.948Z">
+<meta property="og:updated_time" content="2018-06-07T12:27:34.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="대부분은 버그입니다 | EOS">
 <meta name="twitter:description" content="히트를 친 Top 5 게임 속 버그들">
@@ -34,6 +34,7 @@
         <link rel="icon" href="/css/images/logo-favicon.png" />
     
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/libs/titillium-web/styles.css">
     <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
@@ -199,7 +200,7 @@ ga('send', 'pageview');
 <li>로켓 점프 <br><br><img src="/images/대부분은-버그입니다-rocket.png" alt=""><br>로켓 점프는 오버워치, 팀 포트리스 2, 포트나이트 등 fps/tps 게임을 해본 사람이라면 친숙한 개념일 것이다. 점프를 하는 동시에 로켓을 바닥에 쏘면 평소의 1.5~2배 가량의 높이에 다다를 수 있는, 게임이니까 가능한 테크닉이다. 이러한 기술은 1996년 Quake에서 의도되지 않게 게임에 추가된 이래 큰 인기를 끌어, 이후 거의 모든 fps 게임들이 게임 물리엔진에 도용하는 기술이 되버렸다.</li>
 </ol>
 <ol start="4">
-<li>핵쟁이 간디 <br><br><img src="/images/대부분은-버그입니다-Ghandi.png" alt=""><br>문명 시리즈를 해본 사람이라면 우리가 흔히 아는 역사적 인물인 간디라는 사람이 얼마나 무서운지 알 것이다. 툭하면 핵을 날리는 간디의 테러에 수많은 플레이어들이 고뇌하였다. 이러한 문명 시리즈의 전통인 간디의 횡포는 사실 버그로부터 비롯되었었다. 원래 간디의 공격성 수치는 1로 게임에서 가장 낮은 스탯을 갖고 있다. 하지만 이때 인도에 민주주의를 도입 시, 게임원칙에 따라 공격성이 1이 줄어들게 된다. 이에 따라 간디의 공격성 수치는 오버플로우가 일어나 공격성 최댓값인 255로 설정되게 된다. 이 때문에 간디는 문명 시리즈의 타노스로써 이름을 남기게 되었고, 제작자들은 후속작에서도 이 전통을 남기기로 결심하여, 우리가 현재 아는 핵을 사랑하는 간디가 탄생하게 되었다.</li>
+<li>핵쟁이 간디 <br><br><img src="/images/대부분은-버그입니다-Ghandi.png" alt=""><br>문명 시리즈를 해본 사람이라면 우리가 흔히 아는 역사적 인물인 간디라는 사람이 얼마나 무서운지 알 것이다. 툭하면 핵을 날리는 간디의 테러에 수많은 플레이어들이 고뇌하였다. 이러한 문명 시리즈의 전통인 간디의 횡포는 사실 버그로부터 비롯되었었다. 원래 간디의 공격성 수치는 1로 게임에서 가장 낮은 스탯을 갖고 있다. 하지만 이때 인도에 민주주의를 도입 시, 게임원칙에 따라 공격성이 1이 줄어들게 된다. 이에 따라 간디의 공격성 수치는 언더플로우(underflow)가 일어나 공격성 최댓값인 255로 설정되게 된다. 이 때문에 간디는 문명 시리즈의 타노스로써 이름을 남기게 되었고, 제작자들은 후속작에서도 이 전통을 남기기로 결심하여, 우리가 현재 아는 핵을 사랑하는 간디가 탄생하게 되었다.</li>
 </ol>
 <ol start="3">
 <li>GTA의 미친 경찰들 <br><br>1995년, 스튜디오 DMA 디자인은 “Race n Chase’라는 게임을 제작 중이었다. 이 게임은 경찰 혹은 범인 중 한 편을 골라 오픈 월드에서 미션을 수행하는 액션게임으로, 운전에 큰 중점을 둔 게임이었다. 여러 가지 테스트 코드를 넣으면서 플레이테스트를 하는 도중, 제작자들은 경찰 AI가 미쳐 날뛰어 플레이어를 보자마자 민간인들은 개의치 않고 쫓아와 주인공을 차로 치는 등 의도치 않은 결과를 내버렸었다. 우연케도 만들어낸 미친 경찰 AI가 현재까지 만들고 있었던 게임보다 더 재미있다고 판단된 이들은 게임의 방향을 완전히 바꿔, 오픈월드에서 추격하는 경찰을 피하며, 범죄자로 노닥거리는 게임을 만들었다. 이것이 곧 GTA가 탄생하게 된 이유였다고 한다…</li>
@@ -211,7 +212,8 @@ ga('send', 'pageview');
 <li>Space Invaders의 난이도 곡선 <br><br><img src="/images/대부분은-버그입니다-space.png" alt=""><br>거의 모든 게임에는 레벨, 혹은 어떤 형태의 난이도 곡선이 존재한다. 처음에는 쉬운 난이도와 튜토리얼로 플레이어를 가르치고, 점점 어려워지는 난이도를 통해 게임에 대한 플레이어의 흥미를 유지시킨다. 아주 간단하고 널리 알려진 게임의 일반적인 특성이다. 그렇지만 이 또한 신기하게도 원래는 버그, 혹은 시스템 상 한계 때문에 생겨난 개념이다. 스페이스 인베이더를 처음 시작할 때에는 적(외계인) 오브젝트의 수가 너무 많아 게임 시스템의 속도 저하로 자연스럽게 적들의 속도가 느리다. 적들을 웬만큼 쓰러트린 이후에는 적들의 수가 적어졌기에 속도가 다시 정상으로 돌아와 점차 속도가 빨라지는 모습, 즉 난이도가 점점 증가하는 모습을 보인다. 이 난이도가 점차 증가하는 모습은 게임의 중독성, 재미에 큰 효과를 주어, 그 이후 나온 거의 모든 게임에 지금까지 영향을 주고 있다.</li>
 </ol>
 <hr>
-<p><strong style="font-size:1.2em;">16-065 윤요한</strong><br><strong class="nametag_bold">(Yo-Han Yoon | Johnny Youngster)</strong><br>– Youtuber / Music Producer of EOS 16<br><i class="icon fa fa-envelope" style="font-size:1em;"> <a href="mailto:yohanme@naver.com" target="_blank" rel="noopener">yohanme@naver.com</a></i>, <i class="icon fa fa-youtube-play" style="font-size:1em;"> <a href="https://www.youtube.com/channel/UCQ7yoYi-qvppChAIlbLalAQ" target="_blank" rel="noopener">Johnny Youngster</a></i></p>
+<div class="nametag"><div class="nametag_profileImg" style="background-image:url('/images/Nametag_EOS-16.png');"></div> <div style="float:left"><strong class="nametag_bold" style="font-size:1.2em;">16-065 윤요한</strong><br><strong class="nametag_bold"> Yo-Han Yoon | Johnny Youngster </strong><br><span class="nametag_desc_grp">Youtuber</span> <span class="nametag_desc_grp">/ Music Producer of EOS 16</span><br><span class="nametag_links"> <a href="mailto:yohanme@naver.com" target="_blank" rel="noopener"><i class="icon fas fa-envelope-square" style="font-size:1em; color:#ffffff;"></i></a><a href="https://www.youtube.com/channel/UCQ7yoYi-qvppChAIlbLalAQ" target="_blank" rel="noopener"><i class="icon fab fa-youtube" style="font-size:1em; color:#ffffff;"></i></a></span><br></div></div>
+
 
         </div>
         <footer class="article-footer">
@@ -219,7 +221,7 @@ ga('send', 'pageview');
 
 
 
-    <a data-url="http://eosofksa.github.io/2018/05/10/대부분은-버그입니다/" data-id="cjhzmsgf4000lt0ummkxjfvp6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://eosofksa.github.io/2018/05/10/대부분은-버그입니다/" data-id="cji4ip5p3000luwumd5t4gpie" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -366,7 +368,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notice/">-Notice-</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/">EOS 16</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notice/">-Notice-</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/">EOS 16</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -376,7 +378,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">13</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">13</span></li></ul>
         </div>
     </div>
 
@@ -386,7 +388,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR-Augmented-Reality/">AR (Augmented Reality)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ATP-Automatic-Theorem-Proving/">ATP (Automatic Theorem Proving)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevLog/">DevLog</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network-Communication/">Network Communication</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zero-Knowledge-Proof-영지식증명/">Zero Knowledge Proof / 영지식증명</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR-Augmented-Reality/">AR (Augmented Reality)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ATP-Automatic-Theorem-Proving/">ATP (Automatic Theorem Proving)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevLog/">DevLog</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network-Communication/">Network Communication</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zero-Knowledge-Proof-영지식증명/">Zero Knowledge Proof / 영지식증명</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
