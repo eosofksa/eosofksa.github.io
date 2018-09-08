@@ -233,6 +233,7 @@ body {
   font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #fff;
+  word-break: keep-all;
 }
 code {
   margin: 0 2px;
