@@ -35,13 +35,6 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-045-Hong-Geun-Park/</loc>
-        <lastmod>2018-09-08T02:09:07.851Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/categories/Notice/</loc>
         <lastmod>2018-09-08T02:09:32.554Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,15 +42,22 @@
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/</loc>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-077-Won-Joon-Lee/</loc>
         <lastmod>2018-09-08T02:09:44.602Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/categories/EOS-16/16-077-Won-Joon-Lee/</loc>
-        <lastmod>2018-09-08T02:09:44.602Z</lastmod>
+        <loc>http://eosofksa.github.io/categories/EOS-16/</loc>
+        <lastmod>2018-09-08T02:26:13.271Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/categories/EOS-16/16-045-Hong-Geun-Park/</loc>
+        <lastmod>2018-09-08T02:26:13.271Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

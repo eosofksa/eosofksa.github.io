@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://eosofksa.github.io/2018/05/10/Zero-Knowledge-Proof/</loc>
+        <lastmod>2018-09-08T02:26:13.271Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://eosofksa.github.io/2018/05/06/Github-Hexo-Devlog-2/</loc>
         <lastmod>2018-09-08T02:09:44.602Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +33,6 @@
     <url>
         <loc>http://eosofksa.github.io/2018/05/11/2018-SAF-Event/</loc>
         <lastmod>2018-09-08T02:09:32.554Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/2018/05/10/Zero-Knowledge-Proof/</loc>
-        <lastmod>2018-09-08T02:09:07.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
