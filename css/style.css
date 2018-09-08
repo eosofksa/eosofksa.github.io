@@ -1745,10 +1745,10 @@ i.icon {
   text-align: center;
 }
 i.icon:before {
-  -webkit-transition: 0.2sease -in;
-  -moz-transition: 0.2sease -in;
-  -ms-transition: 0.2sease -in;
-  transition: 0.2sease -in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
 }
 .ins-search {
   display: none;
