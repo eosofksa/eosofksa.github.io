@@ -232,6 +232,7 @@ body {
   background: #444;
   font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
   -webkit-text-size-adjust: 100%;
+  color: #fff;
 }
 code {
   margin: 0 2px;
@@ -1782,13 +1783,13 @@ i.icon:before {
   box-shadow: none;
   font-weight: 200;
   border-radius: 0;
-  background: #fff;
+  background: #333;
   line-height: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 12px 28px 12px 20px;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #666;
   font-family: "Microsoft Yahei Light", "Microsoft Yahei", Helvetica, Arial, sans-serif;
 }
 .ins-close {
@@ -1823,7 +1824,7 @@ i.icon:before {
     margin: 0;
     width: 100%;
     height: 100%;
-    background: #f7f7f7;
+    background: #444;
   }
 }
 .ins-section-wrapper {
@@ -1836,7 +1837,7 @@ i.icon:before {
 }
 .ins-section-container {
   position: relative;
-  background: #f7f7f7;
+  background: #444;
 }
 .ins-section {
   font-size: 14px;
@@ -1848,7 +1849,7 @@ i.icon:before {
 }
 .ins-section .ins-section-header {
   color: #9a9a9a;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #666;
 }
 .ins-section .ins-slug {
   margin-left: 5px;
