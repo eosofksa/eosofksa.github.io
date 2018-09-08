@@ -2,50 +2,50 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>http://eosofksa.github.io/tags/AR-Augmented-Reality/</loc>
-        <lastmod>2018-05-25T09:30:07.727Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://eosofksa.github.io/tags/ATP-Automatic-Theorem-Proving/</loc>
-        <lastmod>2018-05-25T09:30:25.704Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://eosofksa.github.io/tags/Network-Communication/</loc>
-        <lastmod>2018-05-26T18:18:56.808Z</lastmod>
+        <lastmod>2018-09-08T02:07:30.793Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/tags/AR-Augmented-Reality/</loc>
+        <lastmod>2018-09-08T02:08:02.150Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://eosofksa.github.io/tags/Hardware/</loc>
-        <lastmod>2018-05-27T17:19:38.443Z</lastmod>
+        <lastmod>2018-09-08T02:08:09.982Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://eosofksa.github.io/tags/Zero-Knowledge-Proof-%EC%98%81%EC%A7%80%EC%8B%9D%EC%A6%9D%EB%AA%85/</loc>
-        <lastmod>2018-06-04T02:23:04.649Z</lastmod>
+        <loc>http://eosofksa.github.io/tags/ATP-Automatic-Theorem-Proving/</loc>
+        <lastmod>2018-09-08T02:08:18.669Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://eosofksa.github.io/tags/Game/</loc>
-        <lastmod>2018-06-07T12:27:34.484Z</lastmod>
+        <lastmod>2018-09-08T02:08:32.200Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://eosofksa.github.io/tags/Zero-Knowledge-Proof-%EC%98%81%EC%A7%80%EC%8B%9D%EC%A6%9D%EB%AA%85/</loc>
+        <lastmod>2018-09-08T02:09:07.851Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://eosofksa.github.io/tags/DevLog/</loc>
-        <lastmod>2018-06-07T12:29:55.267Z</lastmod>
+        <lastmod>2018-09-08T02:09:44.602Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
