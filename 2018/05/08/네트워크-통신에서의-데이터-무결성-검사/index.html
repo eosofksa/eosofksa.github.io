@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>네트워크 통신에서의 데이터 무결성 검사 | EOS 블로그</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Network Communication," />
+    
+    <meta name="description" content="네트워크 통신에서의 데이터 무결성 검사 ··· Checksum">
+<meta name="keywords" content="Network Communication">
+<meta property="og:type" content="article">
+<meta property="og:title" content="네트워크 통신에서의 데이터 무결성 검사 | EOS">
+<meta property="og:url" content="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/index.html">
+<meta property="og:site_name" content="EOS 블로그">
+<meta property="og:description" content="네트워크 통신에서의 데이터 무결성 검사 ··· Checksum">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://eosofksa.github.io/css/images/og-image.png">
+<meta property="og:updated_time" content="2018-09-08T02:29:09.119Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="네트워크 통신에서의 데이터 무결성 검사 | EOS">
+<meta name="twitter:description" content="네트워크 통신에서의 데이터 무결성 검사 ··· Checksum">
+<meta name="twitter:image" content="http://eosofksa.github.io/css/images/og-image.png">
+    
+    <link rel="canonical" href="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/"/>
+
+    
+        <link rel="alternate" href="https://eosofksa.github.io/atom.xml" title="EOS 블로그" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/logo-favicon.png" />
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-118834969-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+
+
+    <script src="https://vjs.zencdn.net/4.0/video.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript">
+    Kakao.init('5a4e0a58ac25b0dc3df9fb0c9fc72828');
+    function sendLink(encodedUrl) {
+      Kakao.Link.sendScrap({
+        requestUrl: encodedUrl
+      });
+    }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Computer Club of KSA</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Notice/">-Notice-</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/">EOS 16</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/EOS-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a></li></ul></li></ul>
+                                    
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/EOS-16/">EOS 16</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-네트워크-통신에서의-데이터-무결성-검사" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        네트워크 통신에서의 데이터 무결성 검사
+        </h1>
+    
+
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/" class="article-date">
+            <time datetime="2018-05-08T04:47:33.000Z" itemprop="datePublished">2018-05-08</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Network-Communication/">Network Communication</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>네트워크 통신에서의 데이터 무결성 검사 ··· Checksum</p>
+<a id="more"></a>
+<h2 id="INTRO"><a href="#INTRO" class="headerlink" title="INTRO"></a>INTRO</h2><p>누구나 컴퓨터는 0과 1로 이루어져 있다는 이야기를 들어본 적이 있을 것이다. 실제로 모든 디지털 정보는 0과 1의 조합을 통해 표현된다. 우리가 어떤 문자를 이용해 정보를 기록하는 것과 같은 이치로 볼 수 있는데, 그 이해를 위해 두 가지 간단한 예를 들어보겠다.</p>
+<p>먼저, 사람이 사용하는 문장을 0과 1로 바꾸어보자. 만약 a부터 e까지 다섯 개의 알파벳을 a: 000 / b: 001 / c: 01 / d: 10 / e: 11 와 같이 대응시킨다면, ‘abbdca’라는 문장은 ‘0000010011001000’로, 거꾸로 ‘0000010011001000’라는 문장은 위 대응 관계에 근거하여 ‘abbdca’로 유일하게 해석됨을 직접 확인할 수 있다.</p>
+<p>이번에는 어떤 명령들을 0과 1로 나타내보자. 4가지 명령 ‘앉아’, ‘일어서’, ‘왼손’, ‘오른손’을 최대한 짧은 길이의 문장으로 겹치지 않게 표현하기 위해선 최소 4가지의 경우를 나타낼 수 있는 0과 1의 조합을 생각해야한다. 이 경우에는 2-bit 만을 이용하여 00, 01, 10, 11 네 가지 경우를 각 명령에 대응 시킬 수 있으며, 해석하는 입장에서는 각 bit의 값을 보고 즉각 어떤 명령인지 알 수 있을 것이다.</p>
+<p>우리가 매일 사용하는 전자기기들은 매 순간 이러한 문장들을 저장하고, 컴퓨터의 중추 CPU에서는 0과 1로 표현된 정해진 길이의 명령들을 1초에 수억번에서 수십억번 가까이 처리하고 있다. 특히 전자기기가 일반인들에게 널리 보급되고, 모든 분야에서 컴퓨터가 사용되고 있으며, 네트워크가 상상할 수 없는 규모로 확장된 지금 사회에선 매 순간 엄청난 양의 정보들이 이동하고 있다.</p>
+<p>여기서 한 가지 의문이 든다. 0과 1로만 이루어진 정보를 무선 통신으로 주고 받는데, 우리의 스마트폰과 노트북은 지구 반대편에서 보낸 정보 조차 한치의 오차 없이 받아낸다. 데이터의 결함은 그 규모에 상관 없이 큰 골칫거리인게, 위에서 예로 든 ‘0000010011001000’를 전송하는 도중 통신의 장애로 인해 ‘0000000011001000’으로 받아진다면 그 의미는 ‘abbdca’가 아닌 ‘aabdca’로 완전히 다른 뜻이 되어버린다. 전송하는 문장이 어떤 명령이라면 시스템 자체에 결함이 생기는 것이다.</p>
+<p>하지만 당장 비가 오는 날 축구 생중계를 볼 때만 해도 통신 상태가 불안정해 TV화면이 자주 끊기는데, 네트워크 통신에서는 어떻게 아무 결함 없이 데이터가 전송될까? 이를 해결하는 단순하지만 강력한 방법, 체크섬(checksum)을 소개하려고 한다.</p>
+<h2 id="Checksum이란"><a href="#Checksum이란" class="headerlink" title="Checksum이란"></a>Checksum이란</h2><p>체크섬은 <a href="https://ko.wikipedia.org/wiki/오류_검출_정정" target="_blank" rel="noopener">중복 검사</a>의 한 형태로, 수신한 자료의 무결성을 보장하려는 하나의 시도라 할 수 있다. 그 형태는 전송하려는 데이터를 더하여 얻은 값에 정해진 비트 수의 모듈라 연산을 취함으로서 결정되는 bit-string이며, 발신하는 입장에서는 raw-data에 checksum을 이어붙여 만들어진 새로운 데이터를 전송한다.</p>
+<p><img src="/images/네트워크-통신에서의-데이터-무결성-검사-Checksum_Image.png" alt=""></p>
+<p>위 그림을 보면 이해에 큰 도움이 될 것이다. Pre-code는 어떤 작업(실행)을 위해 필요한 필수 정보들이라 생각하면 되고, 실질적으로 해석해야 할 raw-data에 대해서 어떤 함수 f를 통해 생성되는 bit-string이 checksum이며, 이 파일의 꼬리에 checksum이 붙는 형태이다.</p>
+<h2 id="Checksum의-동작"><a href="#Checksum의-동작" class="headerlink" title="Checksum의 동작"></a>Checksum의 동작</h2><p>크게 생성 함수 $f$에 대해서, 그리고 checksum을 통해 어떻게 무결성이 검증되는지 이 두 가지를 설명하려 한다. 방법만 보았을 땐 둘 다 굉장히 간단하다.</p>
+<h4 id="Checksum의-생성"><a href="#Checksum의-생성" class="headerlink" title="Checksum의 생성"></a>Checksum의 생성</h4><p>흔히 나열된 데이터를 더하여 체크섬 숫자를 얻고, 이 숫자를 정해진 수로 나누어 그 나머지를 checksum으로 지정한다. 간단하게 예를 들어보겠다. 우리는 지금 32-bit(8-byte) 길이의 데이터에 대해 1-byte checksum을 생성하려고 한다. 32-bit data를 $m$이라 하고, 이 값은 $A267CBF3_{(16)}$이라 하자. 각 byte를 모두 더하면 $43_{(16)}$이 된다. 이때 checksum은 1-byte 크기이므로 $3_{(16)}$, 즉 $0011_{(2)}$이 될 것이다.</p>
+<p>식으로 나타내면, $f(m) = c$ where $m = A267CBF3_{(16)}$, $c = 0011_{(2)}$</p>
+<h4 id="무결성-검증"><a href="#무결성-검증" class="headerlink" title="무결성 검증"></a>무결성 검증</h4><p>수신한 메시지에서 raw-data와 checksum에 해당하는 bit-string을 각각  $m’$, $c’$이라 하자. 이때 checksum 생성 함수 $f$는 서로 약속되어 있다. 만약 $f(m’) = c’$이면, 메시지의 변조나 누락이 없다고 판단한다. 데이터의 변조는 크게 두 가지 케이스로 나뉜다.</p>
+<ol>
+<li>전송 과정에서 발생하는 물리적인 장애로 인한 변조</li>
+<li>의도적인 데이터 조작</li>
+</ol>
+<p>여기까지 납득했다면 checksum은 1.의 대안으로 등장했다는 것을 알 수 있다. 2.의 경우 프로토콜의 암호화를 통해 극복한다. 이 이야기를 갑자기 한 이유는 단순하게 정의된 $f$에 대해 만들어진 $f(m’)$과 주어진 $c’$값의 비교 만으로 어떻게 무결성이 보장되는지 설명하기 위함이다.</p>
+<p>$m’$은 어떤 이유로 인해 $m$(송신 raw-data)의 bit들이 변조된 bit-string이고, $c’$도 마찬가지의 이유로 변조되었을 가능성이 존재한다. 이 때 checksum이 1-bit라면 $m=m’$이 아닌데도 $f(m’)=c’$ 이 될 확률이 굉장히 높을 수 있다. 하지만, checksum의 bit를 하나 늘려 2-bit checksum으로 만들어버리면, 그 확률이 크게 감소한다. 구체적으로는, <strong>checksum bit가 2배로 늘어날 때마다 ‘$m \ne m’$이면서 $f(m’)=c’$일 확률’은 logarithmic하게 감소한다.</strong></p>
+<p>Checksum 생성 함수 $f$의 특징을 고려하여 경우를 따져보면 쉽게 그 이유를 확인할 수 있는데, 글로만 보아선 크게 와닿지 않으므로 직접 간단한 테스트를 해보았다. (10000회)</p>
+<table>
+<thead>
+<tr>
+<th>Bits</th>
+<th>2bit</th>
+<th>4bit</th>
+<th>8bit</th>
+<th>16bit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>확률</td>
+<td>0.252</td>
+<td>0.0645</td>
+<td>0.004</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2471</td>
+<td>0.0631</td>
+<td>0.0033</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2506</td>
+<td>0.06</td>
+<td>0.004</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2487</td>
+<td>0.0623</td>
+<td>0.0038</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2489</td>
+<td>0.0677</td>
+<td>0.0036</td>
+<td>0.0001</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2487</td>
+<td>0.0624</td>
+<td>0.0042</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2521</td>
+<td>0.0634</td>
+<td>0.0041</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.2491</td>
+<td>0.0641</td>
+<td>0.0031</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.255</td>
+<td>0.0625</td>
+<td>0.0035</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td></td>
+<td>0.247</td>
+<td>0.0655</td>
+<td>0.0034</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>평균</td>
+<td>0.2499</td>
+<td>0.0636</td>
+<td>0.0037</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>&asymp;</td>
+<td></td>
+<td>0.2499&sup2;</td>
+<td>0.0636&sup2;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>0과 1로 이루어진 임의의 문장을 생성하고, 각 bit에 대해 동일하게 변조될 확률을 부여한다. 이를 통해 각 케이스 당 10번, 그리고 각 시도 당 10000번 $f(m’)=c’$여부를 확인하여 확률을 도출해냈다. Checksum bit를 2배로 늘려가며 같은 시행을 총 4번 반복하였고, 이를 통해 값들이 서로 지수적인 관계를 가진다는 것을 보이려했다.</p>
+<p>2017학년도 1학기에 해보았던 것이라 구체적으로 설정했던 $m$의 length와 각 bit의 변조 확률은 기억나지 않는다. (아쉽게도 소스 코드를 폐기한듯..) 하지만 위 실험 결과로 미루어 보아 위에서 강조한 내용이 맞는 것을 확인할 수 있다..!</p>
+<p><strong>즉, 어떤 메시지를 수신한 후, 그에 해당하는 $m’$과 $c’$에 대해 $f(m’)=c’$이 아닐경우 이를 reject하고 다시 같은 요청을 보내는데, 변조된 메시지가 이 과정을 통과할 가능성은 checksum의 길이에 따라 급격히 줄어드는 것이다.</strong></p>
+<p>실제로 인터넷 통신 시스템이나 마이크로프로세서 시스템 내부 명령에서의 오류 검증에 checksum이 사용되며, 그 정확성은 확률로서 보장한다. 이런 간단한 방식으로 완전한 데이터 통신을 보장할 수 있다는 점이 실로 놀랍다! 관심있는 사람은 확률을 통해 정확성을 보장하는 비슷한 방식의 <a href="http://eosofksa.github.io/2018/05/10/Zero-Knowledge-Proof/">영지식 증명 프로토콜(ZKP)</a>도 함께 살펴보면 좋을 것 같다.</p>
+<hr>
+<div class="nametag"><div class="nametag_profileImg" style="background-image:url('/images/Nametag_EOS-16.png');"></div> <div style="float:left"><strong class="nametag_bold" style="font-size:1.2em;">16-001 강래현</strong><br><strong class="nametag_bold"> Rae-Hyun Kang | Sharp </strong><br><span class="nametag_desc_grp">Leader of EOS 16</span><br><span class="nametag_links"> <a href="mailto:krh000314@gmail.com" target="_blank" rel="noopener"><i class="icon fas fa-envelope-square" style="font-size:1em; color:#ffffff;"></i></a><a href="https://facebook.com/krh0314" target="_blank" rel="noopener"><i class="icon fab fa-facebook" style="font-size: 1em; color:#ffffff;"></i></a><a href="https://github.com/RHKang" target="_blank" rel="noopener"><i class="icon fab fa-github" style="font-size: 1em; color:#ffffff;"></i></a></span><br></div></div>
+
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/" data-id="cjlt4vyje000uboumqbo751za" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                            '<a href="javascript:sendLink(\'' + url + '\')" class="article-share-kakaotalk" target="_blank" title="Kakaotalk"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow / share:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/eosofksa" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="https://eosofksa.github.io/atom.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+            
+                
+                <li>
+                    <a class="social-tooltip" title="kakaotalk" href="javascript:sendLink('https://eosofksa.github.io/')" target="_blank">
+                        <i class="icon fa fa-comment"></i>
+                    </a>
+                </li>
+                
+            
+
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/05/09/Game-quizzes/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            게임 잡학 퀴즈
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/05/06/Github-Hexo-Devlog-2/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Github + Hexo 개발일지 下</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Notice/">-Notice-</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/">EOS 16</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-001-Rae-Hyun-Kang/">16-001 Rae-Hyun Kang</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-010-Ki-Hwan-Kim/">16-010 Ki-Hwan Kim</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-045-Hong-Geun-Park/">16-045 Hong-Geun Park</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-065-Yo-Han-Yoon/">16-065 Yo-Han Yoon</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-077-Won-Joon-Lee/">16-077 Won-Joon Lee</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/EOS-16/16-120-Sung-Beum-Hong/">16-120 Sung-Beum Hong</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">13</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR-Augmented-Reality/">AR (Augmented Reality)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ATP-Automatic-Theorem-Proving/">ATP (Automatic Theorem Proving)</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DevLog/">DevLog</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hardware/">Hardware</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Network-Communication/">Network Communication</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Zero-Knowledge-Proof-영지식증명/">Zero Knowledge Proof / 영지식증명</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/AR-Augmented-Reality/" style="font-size: 10px;">AR (Augmented Reality)</a> <a href="/tags/ATP-Automatic-Theorem-Proving/" style="font-size: 10px;">ATP (Automatic Theorem Proving)</a> <a href="/tags/DevLog/" style="font-size: 20px;">DevLog</a> <a href="/tags/Game/" style="font-size: 15px;">Game</a> <a href="/tags/Hardware/" style="font-size: 10px;">Hardware</a> <a href="/tags/Network-Communication/" style="font-size: 10px;">Network Communication</a> <a href="/tags/Zero-Knowledge-Proof-영지식증명/" style="font-size: 10px;">Zero Knowledge Proof / 영지식증명</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 EOS</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a>. Modified by <a href="//github.com/sni-j" target="_blank">sni/J</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'eosofksa';
+    
+    
+    var disqus_url = 'http://eosofksa.github.io/2018/05/08/네트워크-통신에서의-데이터-무결성-검사/';
+    
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
